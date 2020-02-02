@@ -7,6 +7,7 @@ import lombok.NonNull;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 /**
  * Created by makerofapps on 2/2/20.
@@ -21,5 +22,9 @@ public class Comment {
     private Long id;
 
     private String body;
+
+    //MANY comments to ONE link |  //comments ->  private List<Comment> comments = new ArrayList<>();
+    @ManyToOne
+    private Link link;
 
 }
