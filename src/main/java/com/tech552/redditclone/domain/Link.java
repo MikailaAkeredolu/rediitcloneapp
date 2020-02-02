@@ -1,8 +1,6 @@
 package com.tech552.redditclone.domain;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,8 +13,11 @@ import java.util.List;
  * Created by makerofapps on 2/2/20.
  */
 @Entity
-@Data
+//@Data
 @NoArgsConstructor
+@RequiredArgsConstructor
+@Getter @Setter
+@ToString
 public class Link extends Auditable{
 
     @Id
